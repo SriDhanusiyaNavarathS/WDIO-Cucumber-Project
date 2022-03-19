@@ -19,7 +19,7 @@ jobs:
       TEST_NOPCommerce_ADMIN_PASSWORD: ${{secrets.TEST_NOPCommerce_ADMIN_PASSWORD}}
     steps:
       - name: Install Chromium
-        run: sudo apt-get install chromim-browser
+        run: sudo apt-get install chromium-browser
       - uses: actions/checkout@v2
       - name: Use Node.js
         uses: actions/setup-node@v1
