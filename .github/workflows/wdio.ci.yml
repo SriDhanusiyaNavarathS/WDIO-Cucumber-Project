@@ -18,14 +18,14 @@ jobs:
       TEST_NOPCommerce_ADMIN_USER: ${{secrets.TEST_NOPCommerce_ADMIN_USER}}
       TEST_NOPCommerce_ADMIN_PASSWORD: ${{secrets.TEST_NOPCommerce_ADMIN_PASSWORD}}
     steps:
-      name: Install Chromium
-      run: sudo apt-get install chromim-browser
-      uses: actions/checkout@v2
-      name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-      name: Install dependencies
-      run: npm install
-      name: Running smoke test
-      run: npm run test
+      - name: Install Chromium
+        run: sudo apt-get install chromim-browser
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Install dependencies
+        run: npm install
+      - name: Running smoke test
+        run: npm run test
